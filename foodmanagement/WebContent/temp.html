@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ </head>
+<body>
+<script>
+function myfun()
+{
+	var a=document.getElementById("pwd").value;
+
+	if(a.length<5 )
+	{
+			document.getElementById("msg1").innerHTML="password length must be above 5 And below 20 char";
+			return false;
+	}	
+	if(a.length>=5 )
+	{
+		document.getElementById("msg1").innerHTML=" ";
+		return true;
+	}
+	
+}
+</script>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+	<div class="container">
+			
+		<div >
+				<span class="navbar-brand ">FOOD WASTE MANAGEMENT</span>
+				
+		</div>		
+			
+	</div>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8">
+		
+		</div>
+		<div class=" col-lg-4 " >
+		
+				<form action=""  method="post"> 	
+					<table class="table table-dark table-hover"><br><br><br>
+						<tr >
+							<td colspan="2"><h3 ><b><center> Change Password</center></b></h3></td>							
+						</tr>
+						
+						<tr>	
+								<td>New Password</td>
+								<td><input class="table-dark" type="text" name="pwd" required></td>
+								<span id="msg1" style="color:red"> </span>
+						
+						</tr>
+						
+						
+							<tr>
+								<td ><a href="agent_forgot.jsp"><input type="button" value="Exit" class="btn btn-success btn-sm"></a>
+								<input type="submit" value="Update" onclick="myfun()" class="btn btn-success btn-sm"></td>
+
+							</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
